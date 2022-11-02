@@ -18,7 +18,8 @@ public class Product {
     // This will create Product_id in Reviews Table without this it will create
     // separate table with Product Id and Review Table. To Create Bidirectional We need to remove it.
 //    @JoinColumn(name="product_id")
-    @OneToMany
+    // mappedBy is used on strong side when bidirectional
+    @OneToMany(mappedBy="product")
     private List<Review> reviews;
 
 }
